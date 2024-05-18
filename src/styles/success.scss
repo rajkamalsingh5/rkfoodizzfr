@@ -1,0 +1,34 @@
+.payment {
+  width: 100%;
+  min-height: 80vh;
+  > main {
+    height: 100%;
+    background-color: white;
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    border-top: 3px solid rgba(128, 128, 128, 0.548);
+    flex-direction: column;
+    align-items: center;
+    > h1 {
+      text-transform: uppercase;
+      text-align: center;
+      margin: 3rem;
+      font: 100 3rem "Roboto";
+    }
+
+    > a {
+      background-color: green;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      margin: 1rem;
+      text-align: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+  }
+}

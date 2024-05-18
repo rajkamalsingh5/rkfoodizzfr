@@ -1,0 +1,67 @@
+.profile {
+  width: 100%;
+ min-height: 80vh;
+
+  > main {
+    max-width: 900px;
+    height: 100%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .2rem;
+
+    > img {
+      height: 12rem;
+      width: 12rem;
+      border-radius: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.491);
+      margin: 2rem;
+    }
+
+    > h5 {
+      font-size: 2rem;
+      // text-decoration: underline;
+    }
+    > div {
+      margin: 1rem;
+      background-color: blueviolet;
+      > a {
+        color: white;
+        padding: 0.3rem 6.5rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+       
+        >svg{
+          margin-right: .4rem;
+        }
+      }
+    }
+
+    > button {
+      border: none;
+      outline: none;
+      padding: 0.4rem 6.5rem;
+      border-radius: 5px;
+      
+      background-color: blueviolet;
+      cursor: pointer;
+        color: white;
+      font-weight: 500;
+      font-size: 1rem;
+      >svg
+      {
+        margin-right: .4rem;
+        align-items: center;
+        text-align: center;
+        font-size: 1rem;
+      }
+      &:hover {
+        background-color: rgba(137, 43, 226, 0.66);
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+
+.about {
+  width: 100%;
+//   background-color: black;
+color: black;
+
+  > main {
+    // background-color: rgba(0, 0, 0, 0.735);
+    border-radius: 2rem 2rem 0 0;
+    border-bottom: 2px solid white;
+    color: black;
+    max-width: 900px;
+    height: 100%;
+    margin: auto;
+
+    > h1 {
+      font: 500 3rem "Roboto";
+      padding: 1rem 2rem;
+    //   border-bottom: 2px solid red;
+      text-transform: uppercase;
+    }
+
+    > article {
+      margin: 2rem 0;
+      > h4 {
+        font: 100 2rem "Roboto";
+        text-transform: uppercase;
+        text-align: center;
+        padding: 2rem 0;
+      }
+
+      > p {
+        letter-spacing: 3px;
+        word-spacing: 3px;
+        padding: 2rem;
+        width: 50%;
+        text-align: center;
+        margin: auto;
+      }
+
+      > a {
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        color: black;
+        font-size: 1.5rem;
+        transition: all 0.3s;
+        margin: auto;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    > div {
+      padding: 2rem;
+      color: black;
+      > h2 {
+        // text-decoration: underline red;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      > article {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > div {
+          margin: 2rem;
+          > img {
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+          }
+          > h3 {
+            margin: 1rem;
+          }
+        }
+        > p {
+          margin: 0 1rem;
+          width: 50%;
+          letter-spacing: 2px;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about > main {
+    > h1 {
+      font: 100 3rem "Roboto";
+      text-align: center;
+    }
+
+    > article > p {
+      width: 100%;
+    }
+
+    > div > article {
+      flex-direction: column;
+
+      > p {
+        text-align: center;
+      }
+    }
+  }
+}

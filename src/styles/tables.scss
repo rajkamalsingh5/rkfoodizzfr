@@ -1,0 +1,59 @@
+.tableClass {
+  width: 100%;
+  min-height: 100vh;
+
+  main {
+    max-width: 900px;
+    // background-color: yellow;
+    // border-top: 2 px solid grey;    
+    margin: auto;
+    height: 100%;
+    padding: 2rem;
+    overflow-x: auto;
+
+    > table {
+      width: 100%;
+      text-align: center;
+      border-collapse: collapse;
+      tr {
+        background-color: whitesmoke;
+      }
+
+      td,
+      th {
+        // background-color: yellow;
+        padding: 1rem;
+
+      }
+
+      th {
+        background-color: blue;
+        color: white;
+        &:first-child {
+          border-radius: 10px 0 0 0;
+        }
+        &:last-child {
+          border-radius: 0 10px 0 0;
+        }
+      }
+
+      td {
+
+        > img {
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+        }
+
+        > a {
+            font-size: 1.4rem;
+        }
+        > button {
+          border: none;
+          cursor: pointer;
+          margin: 0.25rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+nav{
+    height: 3rem;
+    padding: 3rem;
+    font-size: larger;
+    display: flex;
+    // position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.856);
+    background-color: white;
+    >div{
+        display: flex;
+        align-items: center;
+        >svg
+        {
+            color: blueviolet;
+            font-size: 3rem;
+        }
+        >a{
+            margin: 0 2rem;
+            color:black;
+            transition: color 0.3s;
+            &:hover
+            {
+                color: black;
+               scale: 1.1;
+            }
+
+        }
+    }
+}
+@media (max-width:600px)
+{
+   nav{
+    padding: 1rem;
+    >div>a{
+        margin: 0 0.5rem;
+        
+    }
+   }
+}

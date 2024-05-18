@@ -1,0 +1,52 @@
+footer {
+  min-height: 100px;
+  background-color: black;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  color: white;
+  text-align: center;
+  align-items: center;
+
+  h2 {
+    color: blueviolet;
+    font-family: fantasy;
+    font-weight: 400;
+    font-size: 2rem;
+  }
+
+  p,
+  strong {
+    margin: .4rem;
+  }
+
+  aside {
+    height: 100%;
+    // display: flex;
+    // flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+
+    a {
+      margin: 0.5rem;
+      font-size: 3rem;
+      color: white;
+      &:hover {
+        color: blue;
+      }
+    }
+    >div{
+        display: flex;
+        flex-direction: row;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
