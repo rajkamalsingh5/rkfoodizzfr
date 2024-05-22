@@ -6,15 +6,15 @@ const initialState = {
     : {
         cheeseBurger: {
           quantity: 0,
-          price: 2,
+          price: 20,
         },
         vegCheeseBurger: {
           quantity: 0,
-          price: 3,
+          price: 30,
         },
         burgerWithFries: {
           quantity: 0,
-          price: 4,
+          price: 40,
         },
       },
   subTotal: localStorage.getItem("cartPrices")
@@ -61,26 +61,26 @@ export const cartReducer = createReducer(initialState, {
       state.cartItems.vegCheeseBurger.price *
         state.cartItems.vegCheeseBurger.quantity +
       state.cartItems.burgerWithFries.price *
-        state.cartItems.burgerWithFries.quantity)/10;
+        state.cartItems.burgerWithFries.quantity);
 
-    state.tax = state.subTotal * 0.01;
-    state.shippingCharges = state.subTotal > 10 ? 0 : 5;
-    state.total = state.subTotal + state.tax + state.shippingCharges;
+    state.tax = state.subTotal*.18;
+    state.shippingCharges = state.subTotal < 10 ? 5 : 15;
+    state.total = (state.subTotal + state.tax + state.shippingCharges);
   },
 
   emptyState: (state) => {
     state.cartItems = {
       cheeseBurger: {
         quantity: 0,
-        price: 2,
+        price: 20,
       },
       vegCheeseBurger: {
         quantity: 0,
-        price: 3,
+        price: 30,
       },
       burgerWithFries: {
         quantity: 0,
-        price: 4,
+        price: 40,
       },
     };
 
