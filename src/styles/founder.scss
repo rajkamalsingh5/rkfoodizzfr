@@ -16,7 +16,7 @@ color: black;
     > h1 {
       font: 500 3rem "Roboto";
       padding: 1rem 2rem;
-    //   border-bottom: 2px solid red;
+      
       text-transform: uppercase;
     }
 
@@ -26,7 +26,9 @@ color: black;
         font: 100 2rem "Roboto";
         text-transform: uppercase;
         text-align: center;
-        padding: 2rem 0;
+        border-bottom: 2px solid black;
+        border-radius: 3rem;
+        padding: 1rem 0;
       }
 
       > p {
@@ -94,14 +96,18 @@ color: black;
 @media screen and (max-width: 600px) {
   .about > main {
     > h1 {
-      font: 100 3rem "Roboto";
+      font: 100 2rem "Roboto";
       text-align: center;
+      margin-bottom: .3rem;
     }
 
     > article > p {
       width: 100%;
     }
-
+    > article > h4 {
+    font-size: 1rem;
+    border-radius: 0%;
+    }
     > div > article {
       flex-direction: column;
 

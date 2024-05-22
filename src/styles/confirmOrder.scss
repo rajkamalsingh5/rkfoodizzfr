@@ -1,4 +1,4 @@
-.done {
+.confirmOrder {
     width: 100%;
     min-height: 70vh;
     > main {
@@ -49,7 +49,7 @@
   }
   
   @media screen and (max-width: 600px) {
-    .done > main > form {
+    .confirmOrder > main > form {
       > div {
         width: 100%;
       }

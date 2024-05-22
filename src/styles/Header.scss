@@ -3,11 +3,13 @@ nav{
     padding: 3rem;
     font-size: larger;
     display: flex;
-    // position: fixed;
+    position: sticky;
+    z-index: 500;
+    top:0;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.856);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.943);
     background-color: white;
     >div{
         display: flex;
@@ -33,7 +35,7 @@ nav{
 @media (max-width:600px)
 {
    nav{
-    padding: 1rem;
+    padding: 2.5rem;
     >div>a{
         margin: 0 0.5rem;
         

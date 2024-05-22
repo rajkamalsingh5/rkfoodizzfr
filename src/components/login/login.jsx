@@ -2,7 +2,8 @@ import React from 'react'
 import {motion} from "framer-motion";
 import {FcGoogle} from "react-icons/fc"
 import { server } from '../../redux/store';
-const login = () => {
+
+const Login = () => {
 
   const loginHandler=()=>{
     window.open(`${server}/googlelogin`,"_self");
@@ -21,4 +22,4 @@ Login with Google
 
 }
 
-export default login
+export default Login

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const MenuCard = ({ itemNum, burgerSrc, price, title, handler, delay = 0 }) => {
+const MenuCard = ({ itemNum, imgSrc, price, title, handler, delay = 0 }) => {
   return (
     <motion.div
       className="menuCard"
@@ -19,7 +19,7 @@ const MenuCard = ({ itemNum, burgerSrc, price, title, handler, delay = 0 }) => {
     >
       <div>Item {itemNum}</div>
       <main>
-        <img src={burgerSrc} alt={itemNum} />
+        <img src={imgSrc} alt={itemNum} />
 
         <h5>₹{price}</h5>
 

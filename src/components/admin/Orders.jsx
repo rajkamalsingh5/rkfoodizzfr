@@ -53,9 +53,15 @@ const Orders = () => {
                     <td>#{i._id}</td>
                     <td>{i.orderStatus}</td>
                     <td>
-                      {i.orderItems.cheeseBurger.quantity +
-                        i.orderItems.vegCheeseBurger.quantity +
-                        i.orderItems.burgerWithFries.quantity}
+                      
+                      { i.orderItems.samosa.quantity +
+                        i.orderItems.CheeseBurger.quantity +
+                        i.orderItems.cola.quantity+
+                        i.orderItems.jalebi.quantity+
+                        i.orderItems.roll.quantity+
+                        i.orderItems.burgerWithFries.quantity
+                      }
+
                     </td>
                     <td>₹{i.totalAmount}</td>
                     <td>{i.paymentMethod}</td>

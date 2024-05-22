@@ -93,21 +93,42 @@ const OrderDetails = () => {
           <article>
             <h1>Ordered Items</h1>
             <div>
+              <h4>Samosa </h4>
+              <div>
+                <span>{order.orderItems.samosa.quantity}</span> x{" "}
+                <span>{order.orderItems.samosa.price}</span>
+              </div>
+            </div>
+            <div>
               <h4>Cheese Burger</h4>
               <div>
-                <span>{order.orderItems.cheeseBurger.quantity}</span> x{" "}
-                <span>{order.orderItems.cheeseBurger.price}</span>
+                <span>{order.orderItems.CheeseBurger.quantity}</span> x{" "}
+                <span>{order.orderItems.CheeseBurger.price}</span>
               </div>
             </div>
             <div>
-              <h4>Veg Cheese Burger</h4>
+              <h4>cola</h4>
               <div>
-                <span>{order.orderItems.vegCheeseBurger.quantity}</span> x{" "}
-                <span>{order.orderItems.vegCheeseBurger.price}</span>
+                <span>{order.orderItems.burgerWithFries.quantity}</span> x{" "}
+                <span>{order.orderItems.burgerWithFries.price}</span>
               </div>
             </div>
             <div>
-              <h4>Burger Fries</h4>
+              <h4>jalebi</h4>
+              <div>
+                <span>{order.orderItems.jalebi.quantity}</span> x{" "}
+                <span>{order.orderItems.jalebi.price}</span>
+              </div>
+            </div>
+            <div>
+              <h4>roll</h4>
+              <div>
+                <span>{order.orderItems.roll.quantity}</span> x{" "}
+                <span>{order.orderItems.roll.price}</span>
+              </div>
+            </div>
+            <div>
+              <h4>burgerWithFries</h4>
               <div>
                 <span>{order.orderItems.burgerWithFries.quantity}</span> x{" "}
                 <span>{order.orderItems.burgerWithFries.price}</span>

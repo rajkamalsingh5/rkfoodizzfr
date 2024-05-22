@@ -18,7 +18,7 @@ const Box = ({ title, value }) => (
   </div>
 );
 // ================
-const DashBoard = () => {
+const Dashboard = () => {
 
   const dispatch = useDispatch();
   const { usersCount, ordersCount, totalIncome } = useSelector(
@@ -74,4 +74,4 @@ const DashBoard = () => {
   );
 };
 
-export default DashBoard;
+export default Dashboard;

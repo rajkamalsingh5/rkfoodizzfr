@@ -35,10 +35,11 @@ const About = () => {
 
             <p>
               I am Raj, Student of NIT-B.
-              {/* <hr/> */}
-              The founder of Foodizz. Affiliated to
-              God Taste...
-              
+              <br/>
+              <br/>
+              The founder of Foodizz- "Paradise for food Lovers"
+              <br/>
+              "Food is my love language"
             </p>
           </article>
         </div>

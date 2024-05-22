@@ -1,7 +1,7 @@
 import React from 'react'
 import {motion} from "framer-motion";
-import About from "./About.jsx"
-import Menu from "./Menu.jsx"
+import Founder from "./Founder"
+import Menu from "./Menu"
 import emoji from "../../assets/emo_foodi.jpg";
 const Home = () => {
   return (
@@ -11,7 +11,8 @@ const Home = () => {
         <div>
         
             <motion.h1 initial={{x:"-100%",opacity:0,}} whileInView={{x:0,opacity:1}} transition={{delay:.2}}>Khaiye Aur Kho Jaiye</motion.h1>
-            <motion.p initial={{x:"-100%",opacity:0,}} whileInView={{x:0,opacity:1}} transition={{delay:.3}}>U deserve to be here</motion.p>
+            <motion.p initial={{x:"-100%",opacity:0,}} whileInView={{x:0,opacity:1}} transition={{delay:.3}}>Eat What You Love.  <br /> Give Yourself a treat </motion.p>
+           
         </div>
         <div className='glass'>
         <img src={emoji} alt="" />
@@ -21,10 +22,10 @@ const Home = () => {
         <motion.a initial={{y:"-100%",opacity:0}} whileInView={{y:0,opacity:1}} href='#menu'>Items</motion.a>
         
     </section>
-   <About/> 
+   <Founder/> 
    <Menu/>
    </>
   )
 }
 
-export default Home
+export default Home;

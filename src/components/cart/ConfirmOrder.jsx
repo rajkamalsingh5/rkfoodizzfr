@@ -9,7 +9,7 @@ import axios from "axios";
 import { server } from "../../redux/store";
 
 
-const Placed = () => {
+const ConfirmOrder = () => {
 // ===============================
 
 const [paymentMethod, setPaymentMethod] = useState("");
@@ -99,7 +99,7 @@ useEffect(() => {
     toast.success(message);
     dispatch({ type: "clearMessage" });
     dispatch({ type: "emptyState" });
-    navigate("/success");
+    navigate("/paymentsuccess");
   }
   if (error) {
     toast.error(error);
@@ -114,7 +114,7 @@ useEffect(() => {
 // ======================================
 
   return (
-    <section className="done">
+    <section className="confirmOrder">
         <main>
           <h1>Confirm Order</h1>
   
@@ -147,4 +147,4 @@ useEffect(() => {
   )
 }
 
-export default Placed
+export default ConfirmOrder;

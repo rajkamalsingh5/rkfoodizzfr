@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-const success = () => {
+const PaymentSuccess = () => {
   return (
-        <section className="payment">
+        <section className="PaymentSuccess">
           <main>
             <h1>Order Confirmed</h1>
             <p>Order Placed Successfully, You can check order status below</p>
@@ -12,4 +12,4 @@ const success = () => {
   )
 }
 
-export default success
+export default PaymentSuccess;

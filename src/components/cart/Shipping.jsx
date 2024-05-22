@@ -45,7 +45,7 @@ const { shippingInfo } = useSelector((state) => state.cart);
       })
     );
 
-    navigate("/Placed");
+    navigate("/confirmorder");
   };
 
 
