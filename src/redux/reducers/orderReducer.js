@@ -54,7 +54,7 @@ export const ordersReducer = createReducer(
     },
     getOrderDetailsSuccess: (state, action) => {
       state.loading = false;
-      state.orders = action.payload;
+      state.order = action.payload;
     },
     getOrderDetailsFail: (state, action) => {
       state.loading = false;

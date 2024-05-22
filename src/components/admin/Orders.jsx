@@ -55,9 +55,9 @@ const Orders = () => {
                     <td>
                       
                       { i.orderItems.samosa.quantity +
+                       i.orderItems.jalebi.quantity+
                         i.orderItems.CheeseBurger.quantity +
                         i.orderItems.cola.quantity+
-                        i.orderItems.jalebi.quantity+
                         i.orderItems.roll.quantity+
                         i.orderItems.burgerWithFries.quantity
                       }

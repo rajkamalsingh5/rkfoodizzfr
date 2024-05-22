@@ -100,6 +100,13 @@ const OrderDetails = () => {
               </div>
             </div>
             <div>
+            <div>
+              <h4>jalebi</h4>
+              <div>
+                <span>{order.orderItems.jalebi.quantity}</span> x{" "}
+                <span>{order.orderItems.jalebi.price}</span>
+              </div>
+            </div>
               <h4>Cheese Burger</h4>
               <div>
                 <span>{order.orderItems.CheeseBurger.quantity}</span> x{" "}
@@ -109,17 +116,11 @@ const OrderDetails = () => {
             <div>
               <h4>cola</h4>
               <div>
-                <span>{order.orderItems.burgerWithFries.quantity}</span> x{" "}
-                <span>{order.orderItems.burgerWithFries.price}</span>
+                <span>{order.orderItems.cola.quantity}</span> x{" "}
+                <span>{order.orderItems.cola.price}</span>
               </div>
             </div>
-            <div>
-              <h4>jalebi</h4>
-              <div>
-                <span>{order.orderItems.jalebi.quantity}</span> x{" "}
-                <span>{order.orderItems.jalebi.price}</span>
-              </div>
-            </div>
+           
             <div>
               <h4>roll</h4>
               <div>

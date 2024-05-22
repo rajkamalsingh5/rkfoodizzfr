@@ -47,7 +47,6 @@ export const createOrder =
       });
     }
   };
-  // ==============================
 
 export const paymentVerification =
   (razorpay_payment_id, razorpay_order_id, razorpay_signature, orderOptions) =>

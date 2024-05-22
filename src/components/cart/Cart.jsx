@@ -1,17 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import jalebi_ from "../../assets/jalebi.png";
-import samosa_ from "../../assets/samosa.png";
+import { Link } from "react-router-dom";
 import burger1 from "../../assets/burger1.png";
-import roll_ from "../../assets/roll.png";
-import burger2 from "../../assets/burger2.png";
-import cola_ from "../../assets/cola .png"
+import samosa from "../../assets/samosa.png";
+import cola from "../../assets/cola .png";
+import burger3 from "../../assets/burger3.png";
 
 const CartItem = ({ value, title, img, increment, decrement }) => (
   <div className="cartItem">
-    <div className="first">
+    <div>
       <h4>{title}</h4>
       <img src={img} alt="Item" />
     </div>
@@ -25,14 +23,10 @@ const CartItem = ({ value, title, img, increment, decrement }) => (
 );
 
 const Cart = () => {
-
   const {
-   cartItems: {
+    cartItems: {
       cheeseBurger: { quantity: cheeseBurger },
-       samosa: { quantity: samosa },
-      cola: { quantity: cola },
-      jalebi: { quantity: jalebi },
-      roll: { quantity: roll },
+      vegCheeseBurger: { quantity: vegCheeseBurger },
       burgerWithFries: { quantity: burgerWithFries },
     },
     subTotal,
@@ -45,33 +39,17 @@ const Cart = () => {
 
   const dispatch = useDispatch();
 
-
-
-  // ==============
-
   const increment = (item) => {
     switch (item) {
       case 1:
-        dispatch({ type: "samosaIncrement" });
+        dispatch({ type: "cheeseBurgerIncrement" });
         dispatch({ type: "calculatePrice" });
         break;
       case 2:
-          dispatch({ type: "cheeseBurgerIncrement" });
-          dispatch({ type: "calculatePrice" });
-          break;
-      case 3:
-          dispatch({ type: "colaIncrement" });
-          dispatch({ type: "calculatePrice" });
-          break;
-      case 4:
-          dispatch({ type: "jalebiIncrement" });
-          dispatch({ type: "calculatePrice" });
-          break;
-      case 5:
-        dispatch({ type: "rollIncrement" });
+        dispatch({ type: "vegCheeseBurgerIncrement" });
         dispatch({ type: "calculatePrice" });
         break;
-      case 6:
+      case 3:
         dispatch({ type: "burgerWithFriesIncrement" });
         dispatch({ type: "calculatePrice" });
         break;
@@ -81,115 +59,75 @@ const Cart = () => {
         dispatch({ type: "calculatePrice" });
         break;
     }
-
   };
-// ===================================================
 
-const decrement = (item) => {
-  switch (item) {
-    case 1:
-      if(samosa===0) break;
-      dispatch({ type: "samosaDecrement" });
-      dispatch({ type: "calculatePrice" });
-      break;
-    case 2:
-      if(cheeseBurger===0) break;
+  const decrement = (item) => {
+    switch (item) {
+      case 1:
+        if (cheeseBurger === 0) break;
         dispatch({ type: "cheeseBurgerDecrement" });
         dispatch({ type: "calculatePrice" });
         break;
-    case 3:
-      if(cola===0) break;
-        dispatch({ type: "colaDecrement" });
+      case 2:
+        if (vegCheeseBurger === 0) break;
+        dispatch({ type: "vegCheeseBurgerDecrement" });
         dispatch({ type: "calculatePrice" });
         break;
-    case 4:
-      if(jalebi===0) break;
-        dispatch({ type: "jalebiDecrement" });
+      case 3:
+        if (burgerWithFries === 0) break;
+        dispatch({ type: "burgerWithFriesDecrement" });
         dispatch({ type: "calculatePrice" });
         break;
-    case 5:
-      if(roll===0)break;
-      dispatch({ type: "rollDecrement" });
-      dispatch({ type: "calculatePrice" });
-      break;
-    case 6:
-      if(burgerWithFries===0)break;
-      dispatch({ type: "burgerWithFriesDecrement" });
-      dispatch({ type: "calculatePrice" });
-      break;
 
-    default:
-      dispatch({ type: "cheeseBurgerDecrement" });
-      dispatch({ type: "calculatePrice" });
-      break;
-  }
+      default:
+        if (cheeseBurger === 0) break;
+        dispatch({ type: "cheeseBurgerDecrement" });
+        dispatch({ type: "calculatePrice" });
+        break;
+    }
+  };
 
-};
-
-
-// ===========================================================================
-
-
-useEffect(() => {
-  localStorage.setItem("cartItems", JSON.stringify(orderItems));
-  localStorage.setItem(
-    "cartPrices",
-    JSON.stringify({
-      subTotal,
-      tax,
-      shippingCharges,
-      total,
-    })
-  );
-}, [orderItems, subTotal, tax, shippingCharges, total]);
-
-// ===========================================================================
-
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(orderItems));
+    localStorage.setItem(
+      "cartPrices",
+      JSON.stringify({
+        subTotal,
+        tax,
+        shippingCharges,
+        total,
+      })
+    );
+  }, [orderItems, subTotal, tax, shippingCharges, total]);
 
   return (
     <section className="cart">
       <main>
         <CartItem
-          title={"Samosa"}
-          img={samosa_}
-          value={samosa}
+          title={"Cheese Burger"}
+          img={burger1}
+          value={cheeseBurger}
           increment={() => increment(1)}
           decrement={() => decrement(1)}
         />
         <CartItem
-          title={"Cheese Burger"}
-          img={burger1}
+          title={"Samosa"}
+          img={samosa}
+          value={vegCheeseBurger}
+          increment={() => increment(2)}
+          decrement={() => decrement(2)}
+        />
+        <CartItem
+          title={"Coca Cola"}
+          img={cola}
           value={cheeseBurger}
-          increment={() => increment(2)}
-          decrement={() => decrement(2)}
+          increment={() => increment(4)}
+          decrement={() => decrement(4)}
         />
         <CartItem
-          title={"cola"}
-          img={cola_}
-          value={cola}
-          increment={() => increment(2)}
-          decrement={() => decrement(2)}
-        />
-        
-        <CartItem
-        title={"Veg Cheese Burger"}
-        img={burger2}
-        value={burgerWithFries}
-        increment={() => increment(2)}
-        decrement={() => decrement(2)}
-      />
-      <CartItem
-      title={"jalebi"}
-      img={jalebi_}
-      value={jalebi}
-      increment={() => increment(2)}
-      decrement={() => decrement(2)}
-    />
-
-        <CartItem
-          title={"roll"}
-          img={roll_}
-          value={roll}
+          title={"Cheese Burger with French Fries"}
+          img={burger3}
+          value={burgerWithFries}
           increment={() => increment(3)}
           decrement={() => decrement(3)}
         />

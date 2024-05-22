@@ -1,11 +1,11 @@
 import React from "react";
 import MenuCard from "./MenuCard";
-import jalebi from "../../assets/jalebi.png";
-import samosa from "../../assets/samosa.png";
+import jalebi_ from "../../assets/jalebi.png";
+import samosa_ from "../../assets/samosa.png";
 import burger1 from "../../assets/burger2.png";
-import roll from "../../assets/roll.png";
+import roll_ from "../../assets/roll.png";
 import burger2 from "../../assets/burger3.png";
-import cola from "../../assets/cola .png"
+import cola_ from "../../assets/cola .png"
 import { useDispatch } from "react-redux";
 import toast from "react-hot-toast";
 
@@ -14,12 +14,12 @@ const Menu = () => {
   const addToCartHandler = (itemNum) => {
     switch (itemNum) {
       case 1:
-        dispatch({ type: "samosa" });
+        dispatch({ type: "samosaIncrement" });
         dispatch({ type: "calculatePrice" });
         toast.success("Added To Cart");
         break;
         case 2:
-        dispatch({ type: "jalebi" });
+        dispatch({ type: "jalebiIncrement" });
         dispatch({ type: "calculatePrice" });
         toast.success("Added To Cart");
         break;
@@ -29,12 +29,12 @@ const Menu = () => {
         toast.success("Added To Cart");
         break;
       case 4:
-        dispatch({ type: "cola" });
+        dispatch({ type: "colaIncrement" });
         dispatch({ type: "calculatePrice" });
         toast.success("Added To Cart");
         break;
         case 5:
-        dispatch({ type: "roll" });
+        dispatch({ type: "rollIncrement" });
         dispatch({ type: "calculatePrice" });
         toast.success("Added To Cart");
         break;
@@ -44,7 +44,7 @@ const Menu = () => {
         toast.success("Added To Cart");
         break;
       default:
-        dispatch({ type: "jalebi" });
+        dispatch({ type: "jalebiIncrement" });
         dispatch({ type: "calculatePrice" });
         toast.success("Added To Cart");
         break;
@@ -58,15 +58,22 @@ const Menu = () => {
       <div>
         <MenuCard
           itemNum={1}
-          imgSrc={samosa}
+          imgSrc={samosa_}
           price={15}
           title="samosa"
           handler={addToCartHandler}
           delay={0.1}
         />
-        
         <MenuCard
           itemNum={2}
+          imgSrc={jalebi_}
+          price={15}
+          title="jalebi"
+          delay={0.6}
+          handler={addToCartHandler}
+        />
+        <MenuCard
+          itemNum={3}
           imgSrc={burger1}
           price={50}
           title="Cheese Burger "
@@ -75,24 +82,17 @@ const Menu = () => {
         />
 
         <MenuCard
-          itemNum={3}
-          imgSrc={cola}
+          itemNum={4}
+          imgSrc={cola_}
           price={45}
           title="Coca Cola"
           delay={0.4}
           handler={addToCartHandler}
         />
-        <MenuCard
-          itemNum={4}
-          imgSrc={jalebi}
-          price={15}
-          title="jalebi"
-          delay={0.6}
-          handler={addToCartHandler}
-        />
+        
          <MenuCard
           itemNum={5}
-          imgSrc={roll}
+          imgSrc={roll_}
           price={75}
           title="Veg roll"
           delay={0.7}
@@ -101,7 +101,7 @@ const Menu = () => {
         itemNum={6}
         imgSrc={burger2}
         price={100}
-        title="Cheese Burger with French Fries"
+        title="Burger with Fries"
         delay={0.8}
         handler={addToCartHandler}
       /> 

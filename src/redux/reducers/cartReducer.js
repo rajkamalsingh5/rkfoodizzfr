@@ -1,33 +1,20 @@
-
 import { createReducer } from "@reduxjs/toolkit";
 
 const initialState = {
   cartItems: localStorage.getItem("cartItems")
     ? JSON.parse(localStorage.getItem("cartItems"))
     : {
-        samosa: {
+        cheeseBurger: {
           quantity: 0,
-          price: 15,
+          price: 200,
         },
-        CheeseBurger: {
+        vegCheeseBurger: {
           quantity: 0,
-          price: 50,
-        },
-        cola: {
-          quantity: 0,
-          price: 45,
-        },
-        jalebi: {
-          quantity: 0,
-          price: 15,
-        },
-        roll: {
-          quantity: 0,
-          price: 100,
+          price: 500,
         },
         burgerWithFries: {
           quantity: 0,
-          price: 150,
+          price: 1800,
         },
       },
   subTotal: localStorage.getItem("cartPrices")
@@ -48,38 +35,20 @@ const initialState = {
 };
 
 export const cartReducer = createReducer(initialState, {
-  samosaIncrement: (state) => {
-    state.cartItems.samosa.quantity += 1;
+  cheeseBurgerIncrement: (state) => {
+    state.cartItems.cheeseBurger.quantity += 1;
   },
-  CheeseBurgerIncrement: (state) => {
-    state.cartItems.CheeseBurger.quantity += 1;
-  },
-  colaIncrement: (state) => {
-    state.cartItems.cola.quantity += 1;
-  },
-  jalebiIncrement: (state) => {
-    state.cartItems.jalebi.quantity += 1;
-  },
-  rollIncrement: (state) => {
-    state.cartItems.roll.quantity += 1;
+  vegCheeseBurgerIncrement: (state) => {
+    state.cartItems.vegCheeseBurger.quantity += 1;
   },
   burgerWithFriesIncrement: (state) => {
     state.cartItems.burgerWithFries.quantity += 1;
   },
-  samosaDecrement: (state) => {
-    state.cartItems.samosa.quantity -= 1;
+  cheeseBurgerDecrement: (state) => {
+    state.cartItems.cheeseBurger.quantity -= 1;
   },
-  CheeseBurgerDecrement: (state) => {
-    state.cartItems.CheeseBurger.quantity -= 1;
-  },
-  colaDecrement: (state) => {
-    state.cartItems.cola.quantity -= 1;
-  },
-  jalebiDecrement: (state) => {
-    state.cartItems.jalebi.quantity -= 1;
-  },
-  rollDecrement: (state) => {
-    state.cartItems.roll.quantity -= 1;
+  vegCheeseBurgerDecrement: (state) => {
+    state.cartItems.vegCheeseBurger.quantity -= 1;
   },
   burgerWithFriesDecrement: (state) => {
     state.cartItems.burgerWithFries.quantity -= 1;
@@ -87,16 +56,10 @@ export const cartReducer = createReducer(initialState, {
 
   calculatePrice: (state) => {
     state.subTotal =
-    state.cartItems.samosa.price *
-        state.cartItems.samosa.quantity +
-        state.cartItems.cheeseBurger.price *
+      state.cartItems.cheeseBurger.price *
         state.cartItems.cheeseBurger.quantity +
-        state.cartItems.cola.price *
-        state.cartItems.cola.quantity +
-      state.cartItems.jalebi.price *
-        state.cartItems.jalebi.quantity +
-      state.cartItems.roll.price *
-        state.cartItems.roll.quantity +
+      state.cartItems.vegCheeseBurger.price *
+        state.cartItems.vegCheeseBurger.quantity +
       state.cartItems.burgerWithFries.price *
         state.cartItems.burgerWithFries.quantity;
 
@@ -107,29 +70,17 @@ export const cartReducer = createReducer(initialState, {
 
   emptyState: (state) => {
     state.cartItems = {
-      samosa: {
-        quantity: 0,
-        price: 15,
-      },
       cheeseBurger: {
         quantity: 0,
-        price: 50,
+        price: 200,
       },
-      cola: {
+      vegCheeseBurger: {
         quantity: 0,
-        price: 45,
-      },
-      jalebi: {
-        quantity: 0,
-        price: 15,
-      },
-      roll: {
-        quantity: 0,
-        price: 100,
+        price: 500,
       },
       burgerWithFries: {
         quantity: 0,
-        price: 150,
+        price: 1800,
       },
     };
 
