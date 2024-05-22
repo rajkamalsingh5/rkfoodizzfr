@@ -45,7 +45,7 @@ const MyOrders = () => {
                     {
                       // i.orderItems.samosa.quantity +
                       // i.orderItems.jalebi.quantity+
-                      i.orderItems.CheeseBurger.quantity +
+                      i.orderItems.cheeseBurger.quantity +
                       // i.orderItems.cola.quantity+
                       // i.orderItems.roll.quantity+
                       i.orderItems.burgerWithFries.quantity
