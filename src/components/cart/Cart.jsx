@@ -121,8 +121,8 @@ const Cart = () => {
           title={"Coca Cola"}
           img={cola}
           value={cheeseBurger}
-          increment={() => increment(4)}
-          decrement={() => decrement(4)}
+          increment={() => increment(.5)}
+          decrement={() => decrement(.5)}
         />
         <CartItem
           title={"Cheese Burger with French Fries"}

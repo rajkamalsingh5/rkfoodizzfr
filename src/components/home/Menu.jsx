@@ -59,7 +59,7 @@ const Menu = () => {
         <MenuCard
           itemNum={1}
           imgSrc={samosa_}
-          price={15}
+          price={25}
           title="samosa"
           handler={addToCartHandler}
           delay={0.1}
@@ -67,7 +67,7 @@ const Menu = () => {
         <MenuCard
           itemNum={2}
           imgSrc={jalebi_}
-          price={15}
+          price={30}
           title="jalebi"
           delay={0.6}
           handler={addToCartHandler}
@@ -75,7 +75,7 @@ const Menu = () => {
         <MenuCard
           itemNum={3}
           imgSrc={burger1}
-          price={50}
+          price={25}
           title="Cheese Burger "
           delay={0.3}
           handler={addToCartHandler}
@@ -84,7 +84,7 @@ const Menu = () => {
         <MenuCard
           itemNum={4}
           imgSrc={cola_}
-          price={45}
+          price={30}
           title="Coca Cola"
           delay={0.4}
           handler={addToCartHandler}
@@ -93,14 +93,14 @@ const Menu = () => {
          <MenuCard
           itemNum={5}
           imgSrc={roll_}
-          price={75}
+          price={30}
           title="Veg roll"
           delay={0.7}
           handler={addToCartHandler}
         /> <MenuCard
         itemNum={6}
         imgSrc={burger2}
-        price={100}
+        price={40}
         title="Burger with Fries"
         delay={0.8}
         handler={addToCartHandler}
