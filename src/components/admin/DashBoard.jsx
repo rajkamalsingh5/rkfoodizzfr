@@ -51,8 +51,12 @@ const Dashboard = () => {
           <div className="sub">
          
           <article>
+            <div>
             <Box title="Users" value={usersCount} />
+            </div>
+            <div>
             <Box title="Income" value={totalIncome} />
+            </div>
           </article>
 
           </div>

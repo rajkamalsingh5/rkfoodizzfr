@@ -23,7 +23,9 @@
       justify-content: space-evenly;
       align-items: center;
 
-      > div {
+      > article {
+
+        >div{
         background-color: rgba(0, 0, 0, 0.847);
         color: white;
         // color: blueviolet;
@@ -39,6 +41,7 @@
           font: 100 1.1rem "Roboto";
         }
       }
+    }
     }
 
     > section {
