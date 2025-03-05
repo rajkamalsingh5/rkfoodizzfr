@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { AiFillEye } from "react-icons/ai";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -54,9 +54,9 @@ const MyOrders = () => {
                   <td>₹{i.totalAmount}</td>
                   <td>{i.paymentMethod}</td>
                   <td>
-                <Link to={`/order/${i._id}`}>
+                {/* <Link to={`/`}> */}
                     <AiFillEye />
-                  </Link>
+                  {/* </Link> */}
                 </td>
               </tr>
             ))}

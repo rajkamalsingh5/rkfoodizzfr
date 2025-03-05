@@ -7,20 +7,24 @@ export const loadUser = () => async (dispatch) => {
       type: "loadUserRequest",
     });
 
-    const { data } = await axios.get(`${server}/me`, {
-      withCredentials: true,
-    });
+        // console.log(server);
+        const { data } = await axios.get(`${server}/me`, {
+          withCredentials: true,
+        });
+        // console.log(data);
 
     dispatch({
       type: "loadUserSuccess",
       payload: data.user,
     });
   } catch (error) {
+    console.error("Axios error:", error);
     dispatch({
       type: "loadUserFail",
-      payload: error.response.data.message,
+      payload: error.response?.data?.message || error.message || "Something went wrong",
     });
   }
+  
 };
 
 export const logout = () => async (dispatch) => {
